@@ -25,7 +25,7 @@ router.get('/:id', async function(req, res) {
 })
 
 router.patch('/comment/:id', async function(req, res) {
-    let response = await videoSchema.update({
+    let response = await videoSchema.updateOne({
         _id : req.params.id},
         { $push: { "comments": req.body.comment}}) 
 
