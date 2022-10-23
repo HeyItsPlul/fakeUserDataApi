@@ -14,6 +14,9 @@ app.use(cors())
 const userRoute = require('./Routes/user')
 app.use('/user', userRoute)
 
+const videoRoute = require('./Routes/video')
+app.use('/video', videoRoute)
+
 // Connect To DataBase
 const PORT = process.env.PORT || 5000
 app.listen(PORT, console.log(`Api Online Using Port: ${PORT}`))
