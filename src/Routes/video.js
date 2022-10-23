@@ -32,4 +32,12 @@ router.patch('/comment/:id', async function(req, res) {
     res.json(response)
 })
 
+router.patch('/like/:id', async function(req, res) {
+    let response = await videoSchema.updateOne({
+        _id : req.params.id},
+        {$inc : {"likes" : 1 
+    }})
+
+res.json(response)
+})
 module.exports = router
