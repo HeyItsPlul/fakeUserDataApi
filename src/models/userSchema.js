@@ -49,6 +49,10 @@ const videoSchema = mongoDB.Schema({
     },
     likes: {
         type: Number
+    },
+    creator: {
+        type: String,
+        required: true
     }
 })
 
